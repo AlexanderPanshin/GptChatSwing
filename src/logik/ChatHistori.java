@@ -1,6 +1,7 @@
 package logik;
 
 import gui.GlobalPanel;
+import music.Playerclip;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -19,7 +20,16 @@ public class ChatHistori {
             try {
                 jarDir.createNewFile();
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                File tempJarDir = new File(System.getProperty("user.home") + File.separator + ".ChatGptConfig");
+                tempJarDir.mkdirs();
+                jarDir = new File(System.getProperty("user.home") + File.separator + ".ChatGptConfig" + File.separator + "chat");
+                if (!jarDir.exists()){
+                    try {
+                        jarDir.createNewFile();
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
             }
         }
 
@@ -40,7 +50,16 @@ public class ChatHistori {
             try {
                 file.createNewFile();
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                File tempJarDir = new File(System.getProperty("user.home") + File.separator + ".ChatGptConfig");
+                tempJarDir.mkdirs();
+                file = new File(System.getProperty("user.home") + File.separator + ".ChatGptConfig" + File.separator + "chat");
+                if (!file.exists()){
+                    try {
+                        file.createNewFile();
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
             }
         }
         try (BufferedReader br = new BufferedReader(new FileReader(file)))
