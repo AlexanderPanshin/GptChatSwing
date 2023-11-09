@@ -41,7 +41,6 @@ public class PostApache {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(otvet);
         return otvet;
 
 
