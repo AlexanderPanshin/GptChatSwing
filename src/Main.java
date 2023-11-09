@@ -1,4 +1,5 @@
 import gui.GlobalPanel;
+import logik.PostApache;
 
 import javax.swing.*;
 
