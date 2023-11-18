@@ -13,6 +13,9 @@ public class Header extends JPanel {
     private JPasswordField pass;
     private JButton connect;
     private JLabel info;
+    private  JCheckBox jCheckBox;
+
+
     public Header() throws HeadlessException {
         setLayout(new FlowLayout());
         login = new JTextField(10);
@@ -33,12 +36,20 @@ public class Header extends JPanel {
         info = new JLabel("Не подключены");
         info.setFocusable(true);
         info.getAccessibleContext().setAccessibleName("Не подключены");
+        jCheckBox = new JCheckBox("Запомнить");
         add(login);
         add(pass);
+        add(jCheckBox);
         add(connect);
+
         add(info);
     }
-
+    public boolean isSavePassword(){
+        return jCheckBox.isSelected();
+    }
+    public JCheckBox getjCheckBox() {
+        return jCheckBox;
+    }
     public JTextField getLogin() {
         return login;
     }

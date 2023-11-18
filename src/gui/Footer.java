@@ -16,7 +16,7 @@ public class Footer extends JPanel {
     public Footer() {
         setLayout(new FlowLayout());
         send = new JButton("Отправить");
-        clear = new JButton("Отчистить");
+        clear = new JButton("Очистить");
         exit = new JButton("  Выйти  ");
         pay = new JButton("Оплатить");
         send.addActionListener(new SendButtonListiner());

@@ -5,9 +5,12 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class Playerclip {
-    private static Sequencer sequencer;;
-    public static void playRoboMusic(){
-        InputStream resource = Playerclip.class.getResourceAsStream("Robocop3.mid");
+    private static Sequencer sequencer;
+    ;
+
+    public static void playRoboMusic() {
+
+        InputStream resource = Playerclip.class.getResourceAsStream("Robocop3low.mid");
         Sequence sequence = null;
         try {
             sequence = MidiSystem.getSequence(resource);
@@ -31,9 +34,14 @@ public class Playerclip {
         } catch (InvalidMidiDataException e) {
             throw new RuntimeException(e);
         }
+
+
         sequencer.start();
     }
-    public static void stopRoboMusic(){
+
+    public static void stopRoboMusic() {
         sequencer.stop();
     }
+
+
 }

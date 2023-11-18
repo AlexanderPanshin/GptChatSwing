@@ -1,6 +1,7 @@
 package gui;
 
 import logik.ChatHistori;
+import logik.LoginHistori;
 import logik.Post;
 
 import javax.swing.*;
@@ -32,6 +33,7 @@ public class GlobalPanel extends JFrame {
         add(outArea);
         add(footer);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        addWindowListener(new LoginHistori());
         globalPanel = this;
     }
 

@@ -1,6 +1,7 @@
 package gui;
 
 import listener.RMouseMenu;
+import listener.SendEnter;
 import listener.TabAdapter;
 
 import javax.swing.*;
@@ -18,6 +19,7 @@ public class OutArea extends JPanel {
         textArea.addKeyListener(new TabAdapter());
         textArea.setComponentPopupMenu(new RMouseMenu(textArea));
         textArea.setBorder(new TitledBorder("Ввод"));
+        textArea.addKeyListener(new SendEnter());
         add(textArea);
     }
 
