@@ -87,6 +87,7 @@ public class LoginHistori implements WindowListener {
                 String [] temp = stroka.split(":");
                 GlobalPanel.getHeader().getPass().setText(temp[1]);
                 GlobalPanel.getHeader().getjCheckBox().setSelected(true);
+                GlobalPanel.getOutArea().getTextArea().requestFocus();
             }
         }
     }

@@ -28,14 +28,15 @@ public class SendButtonListiner implements ActionListener {
                         }
                     });
                     String otvet = PostApache.liteTest(vopros);
-                    ChatHistori.saveChat(otvet,"Чат бот ГПТ");
+                    ChatHistori.saveChat(otvet + System.lineSeparator(),"Чат бот ГПТ");
                     String temp = GlobalPanel.getChat().getChatArea().getText();
                     SwingUtilities.invokeLater(new Runnable() {
                         @Override
                         public void run() {
-                            GlobalPanel.getChat().getChatArea().setText(temp + System.lineSeparator() + "Вы - " + vopros + System.lineSeparator() + "Чат бот ГПТ - " + otvet);
+                            GlobalPanel.getChat().getChatArea().setText(temp + System.lineSeparator() + "Вы - " + vopros + System.lineSeparator() + "Чат бот ГПТ - " + otvet + System.lineSeparator());
                             GlobalPanel.getChat().getChatArea().requestFocus();
                             GlobalPanel.getFooter().getSend().setEnabled(true);
+                            GlobalPanel.getChat().getChatArea().setCaretPosition(GlobalPanel.getChat().getChatArea().getText().lastIndexOf("Вы - "));
                         }
                     });
                     Playerclip.stopRoboMusic();

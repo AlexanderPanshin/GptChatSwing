@@ -12,6 +12,7 @@ public class Chat extends JPanel {
         chatArea = new JTextArea(5,40);
         chatArea.setEditable(false);
         chatArea.setLineWrap(true);
+        chatArea.setWrapStyleWord(true);
         chatArea.setText("Тут будет переписка с ботом");
         chatArea.setBorder(new LineBorder(Color.BLACK));
         chatArea.getAccessibleContext().setAccessibleName("Область чата не редактируемая");

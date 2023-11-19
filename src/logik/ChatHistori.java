@@ -81,7 +81,7 @@ public class ChatHistori {
         }
     }
     public static boolean clearChat(){
-        File jarDir = new File(ClassLoader.getSystemClassLoader().getResource("Main.class").getPath() + "chat");
+        File jarDir = new File(new File(GlobalPanel.class.getProtectionDomain().getCodeSource().getLocation().getPath()).getParent() + File.separator + "chat");
         if(!jarDir.exists()){
             try {
                 jarDir.createNewFile();
