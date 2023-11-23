@@ -42,4 +42,4 @@ Java 19 и выше
 ## Сборки:
 Обычная [Jar сборка](https://github.com/AlexanderPanshin/GptChatSwing/blob/master/out/artifacts/GptChatSwing_jar/GptChatSwing.jar) требуется Java 19 и выше\
 Jar запакованная [в exe](https://github.com/AlexanderPanshin/GptChatSwing/blob/master/out/artifacts/GptChatSwing_jar/GptChatSwing.exe) с помощью Launch4j. Требуеться Java 19 и выше.\
-Программа с собственой средой исполнения. Портабельная версия. Не требует установки Java./
+Программа с собственой средой исполнения. [Портабельная версия](https://github.com/AlexanderPanshin/GptChatSwing/blob/master/out/artifacts/GptChatSwing_jar/GptChatSwingPortable01.zip). Не требует установки Java.
