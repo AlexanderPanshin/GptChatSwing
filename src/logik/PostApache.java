@@ -33,6 +33,7 @@ public class PostApache {
                     .ignoreContentType(true)
                     .execute();
         } catch (IOException e) {
+            e.printStackTrace();
             return "Time out!";
         }
         String otvet = "";
