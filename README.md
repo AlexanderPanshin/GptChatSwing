@@ -27,11 +27,8 @@
 Запуск в Виндовс возможен просто двойным кликом по jar архиву.
 Также можно запустить в командной строке командой
 `java -jar .\GptChatSwing.jar`
-Иногда, для чтения Java приложений скринридерами, нужно включить Bridge, подробнее [тут](https://docs.oracle.com/javase/8/docs/technotes/guides/access/enable_and_test.html)
-Для поддержки экранного диктора орка (Ubunthu и т.д.) можно воспользоваться следующей командой:
-`sudo java -jar -Djavax.accessibility.assistive_technologies=org.GNOME.Accessibility.AtkWrapper GptChatSwing.jar`,
-также должен быть установлен пакет libatk-wrapper-java
-и орка последней версии.
+Также есть сборка с собственной средеой выполнения. Запуск программы в ней происходит по клику
+GPTSwing.exe
 
 ## Сборка:
 Для сборки понадобится дополнительная библиотека [Jsoup](https://jsoup.org/)
@@ -43,3 +40,16 @@ Java 19 и выше
 Обычная [Jar сборка](https://github.com/AlexanderPanshin/GptChatSwing/blob/master/out/artifacts/GptChatSwing_jar/GptChatSwing.jar) требуется Java 19 и выше\
 Jar запакованная [в exe](https://github.com/AlexanderPanshin/GptChatSwing/blob/master/out/artifacts/GptChatSwing_jar/GptChatSwing.exe) с помощью Launch4j. Требуеться Java 19 и выше.\
 Программа с собственой средой исполнения. [Портабельная версия](https://github.com/AlexanderPanshin/GptChatSwing/blob/master/out/artifacts/GptChatSwing_jar/GptChatSwingPortable01.zip). Не требует установки Java.
+
+## Специальные возможности:
+Навигация по программе возможна с использованием одной клавиатуры.
+Программа доступна для экранных дикторов:
+Linux - Иногда, для чтения Java приложений скринридерами, нужно включить Bridge, подробнее [тут](https://docs.oracle.com/javase/8/docs/technotes/guides/access/enable_and_test.html)
+Для поддержки экранного диктора орка (Ubunthu и т.д.) можно воспользоваться следующей командой:
+`sudo java -jar -Djavax.accessibility.assistive_technologies=org.GNOME.Accessibility.AtkWrapper GptChatSwing.jar`,
+также должен быть установлен пакет libatk-wrapper-java
+и орка последней версии.
+
+Windows – В некоторых случаях нужно включить Java Access Bridge. Панель управления - Центр специальных возможностей - Использование компьютера без дисплея   
+там следует поставить галочку
+Enable Java Access Bridge
